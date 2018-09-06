@@ -18,9 +18,7 @@ abstract class Book{
 
     }
 }
-class sellingBook{
 
-}
 trait SellingBook{
     public $publisher;
     public function createFinalDraft(){
@@ -28,11 +26,17 @@ trait SellingBook{
     }
 
     public function sendToDistributor(){
-        
+        echo 'sending';
     }
 }
 class SciFiBook{
     public $varB;
-
+    use SellingBook;
+    public function sendToDistributor(){
+        echo 'sending direct'; 
+    }
 }
+/** @var SciFiBook */
+$a = new SciFiBook();
 
+$a->sendToDistributor();
