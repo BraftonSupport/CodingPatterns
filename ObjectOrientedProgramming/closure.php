@@ -21,7 +21,7 @@ $third = $secondary('james');
 
 $third('allan');
 
-
+$var = 'testing';
 
 $callback = function() use (&$var){
 
