@@ -21,10 +21,10 @@ $third = $secondary('james');
 
 $third('allan');
 
-$var = 'testing';
+$var = ["value", "something"];
 
 $callback = function() use (&$var){
-
+    $var[] = "else";
 };
 
 
